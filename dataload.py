@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pydeck as pdk
 
 st.title('Uber pickups in NYC')
 
@@ -17,7 +16,6 @@ def load_data(nrows):
     data.rename(lowercase, axis='columns', inplace=True)
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
     return data
-
 
 # 텍스트 요소 생성. 사용자에게 데이터가 로드 되고 있음을 알린다.
 data_load_state = st.text('Loading data...')
